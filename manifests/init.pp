@@ -299,7 +299,7 @@ class corosync(
   Enum['file', 'string'] $authkey_source                  = $corosync::params::authkey_source,
   Variant[Stdlib::Absolutepath,String[1]] $authkey        = $corosync::params::authkey,
   Optional[Integer] $threads                              = undef,
-  Integer[0,65535] $port                                  = $corosync::params::port,
+  Variant[Array,Integer[0,65535]] $port                                  = $corosync::params::port,
   Corosync::IpStringIp $bind_address                      = $corosync::params::bind_address,
   Optional[Stdlib::Compat::Ip_address] $multicast_address = undef,
   Optional[Array] $unicast_addresses                      = undef,

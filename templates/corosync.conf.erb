@@ -52,8 +52,8 @@ totem {
     }
 <% end -%>
     bindnetaddr: <%= Array(@bind_address)[interface] %>
-<% elsif interface == 0 -%>
-    bindnetaddr: <%= Array(@bind_address)[0] %>
+<% else -%>
+    bindnetaddr: <%= Array(@bind_address)[interface] %>
 <% end -%>
     ringnumber:  <%= interface %>
     mcastport:   <%= Array(@port)[interface] || @port %>
